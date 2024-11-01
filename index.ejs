@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Node JS - MySQL</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Destinasi Pulau Terbaik di Indonesia</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Lokasi</th>
+            <th>Harga</th>
+            <th>Action</th>
+        </tr>
+        <% destinasi.forEach(function(pulau) { %>
+            <tr>
+                <td><%= pulau.id %></td>
+                <td><%= pulau.name %></td>
+                <td><%= pulau.lokasi %></td>
+                <td><%= pulau.harga %></td>
+                <td>
+                    <a href="/edit/<%= pulau.id %>">Edit</a>
+                    <a href="/delete/<%= pulau.id %>">Delete</a>
+                </td>
+            </tr>
+        <% }); %>
+    </table>
+    <a href="/auth/logout">Logout</a>
+</body>
+</html>

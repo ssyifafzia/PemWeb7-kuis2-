@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="/styles.css"> 
+    <title>Edit Destinasi Pulau</title>
+</head>
+<body>
+    <h2>Edit Destinasi Pulau</h2>
+    <form action="/update/<%= pulau.id %>" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= pulau.name %>" required><br>
+        
+        <label for="lokasi">Lokasi:</label>
+        <input type="text" name="lokasi" id="lokasi" value="<%= pulau.lokasi %>" required><br>
+        
+        <label for="harga">Harga:</label>
+        <input type="text" name="harga" id="harga" value="<%= pulau.harga %>" required><br>
+        
+        <label for="phone">Telephone:</label>
+        <input type="text" name="phone" id="phone" value="<%= pulau.phone %>" required><br>
+        
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
